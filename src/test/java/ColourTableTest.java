@@ -1,8 +1,5 @@
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
-
 import java.awt.*;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ColourTableTest {
@@ -51,5 +48,6 @@ public class ColourTableTest {
         table.add(20, 20, 20);
         assertThrows(IndexOutOfBoundsException.class, ()->table.add(30,30,30));
     }
+
 }
 

@@ -1,10 +1,9 @@
 import java.awt.Color;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class ColourTable {
 
-    int size;
+    final int size;
     ArrayList<Color> palette;
 
     public ColourTable() {
@@ -16,7 +15,7 @@ public class ColourTable {
             throw new IllegalArgumentException("Number entered was not a power of 2 and also greater than 1");
         }
         this.size = size;
-         this.palette = new ArrayList<Color>(size);
+        this.palette = new ArrayList<Color>(size);
     }
 
     public int getSize(){
@@ -34,6 +33,5 @@ public class ColourTable {
     }
 
     public static void main(String[] args) {
-
     }
 }
