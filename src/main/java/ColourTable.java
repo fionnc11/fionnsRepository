@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ColourTable {
@@ -18,7 +19,14 @@ public class ColourTable {
          this.palette = new ArrayList<Color>(size);
     }
 
-    public void add(int r, int g, int b) {
+    public int getSize(){
+        return size;
+    }
+
+    public void add(int r, int g, int b){
+        if (palette.size() == this.getSize()){
+            throw new IndexOutOfBoundsException("Palette is already full");
+        }
         if (r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) {
             throw new IllegalArgumentException("Invalid red, green or blue parameter");
         }
