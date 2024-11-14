@@ -11,7 +11,7 @@ public class ColourTableTest {
     }
 
     @Test
-    public void testConstructorWithoutParameterPassed() {
+    public void testConstructorWithoutParameter() {
         //test to check exception handling
         assertThrows(IllegalArgumentException.class, () -> new ColourTable());
     }
@@ -29,7 +29,7 @@ public class ColourTableTest {
     }
 
     @Test
-    public void testAddExceptions() {
+    public void testAddWithInvalidParameters() {
         ColourTable table = new ColourTable(2);
         //pass invalid parameters
         assertThrows(IllegalArgumentException.class, () -> {
@@ -41,7 +41,7 @@ public class ColourTableTest {
     }
 
     @Test
-    public void testPaletteCapacityExceptions() {
+    public void testAddWhenPaletteFull() {
         ColourTable table = new ColourTable(2);
         //add more colours than table can handle
         table.add(10, 10, 10);

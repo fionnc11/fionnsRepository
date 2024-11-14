@@ -75,5 +75,12 @@ public class ColourTable {
     }
 
     public static void main(String[] args) {
+        //example use of class
+        ColourTable myColTable = new ColourTable(4);
+        myColTable.add(0, 1, 1);
+        myColTable.add(0, 2, 2);
+        myColTable.add(4, 3, 3);
+        myColTable.add(4, 5, 4);
+        System.out.println(myColTable);
     }
 }
