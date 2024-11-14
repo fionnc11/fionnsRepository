@@ -49,5 +49,14 @@ public class ColourTableTest {
         assertThrows(IndexOutOfBoundsException.class, ()->table.add(30,30,30));
     }
 
+    @Test
+    public void testToString(){
+        //test for overriding toString so the object can be presented in a tidy manner
+        ColourTable table = new ColourTable(2);
+        table.add(10, 10, 15);
+        table.add(20, 20, 30);
+        assertEquals("Colour Table : {size = 2, palette = [{r=10,g=10,b=15},{r=20,g=20,b=30}]}",
+                table.toString());
+    }
 }
 
