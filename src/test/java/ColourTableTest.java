@@ -58,5 +58,14 @@ public class ColourTableTest {
         assertEquals("Colour Table : {size = 2, palette = [{r=10,g=10,b=15},{r=20,g=20,b=30}]}",
                 table.toString());
     }
+
+    @Test
+    public void testToStringPaletteNotFull(){
+        ColourTable table = new ColourTable(4);
+        table.add(10, 10, 15);
+        table.add(20, 20, 30);
+        assertEquals("Colour Table : {size = 4, palette = [{r=10,g=10,b=15},{r=20,g=20,b=30}]}",
+                table.toString());
+    }
 }
 

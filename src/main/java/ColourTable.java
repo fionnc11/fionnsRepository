@@ -63,14 +63,15 @@ public class ColourTable {
     public String toString() {
         String output;
         output = "Colour Table : {size = " + this.getSize() + ", palette = [";
-        for(int i=0; i < (this.getSize()) - 1;i++){
+        for(int i=0; i < (palette.size());i++){
             output = output + "{r=" + this.palette.get(i).getRed() +
                     ",g=" + this.palette.get(i).getGreen() +
-                    ",b=" + this.palette.get(i).getBlue() + "},";
+                    ",b=" + this.palette.get(i).getBlue() + "}";
+            if(i < palette.size() - 1){
+                output = output + ",";
+            }
         };
-        output += "{r=" + this.palette.get(this.getSize() - 1).getRed() +
-                ",g=" + this.palette.get(this.getSize() - 1).getGreen() +
-                ",b=" + this.palette.get(this.getSize() - 1).getBlue() + "}]}";
+        output = output + "]}";
         return output;
     }
 
