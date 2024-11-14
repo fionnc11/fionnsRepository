@@ -61,10 +61,17 @@ public class ColourTable {
 
     @Override
     public String toString() {
-        return "Colour Table : {size = " + this.getSize() + ", palette = [{r="+ this.palette.get(0).getRed() + ",g="
-                + this.palette.get(0).getGreen() + ",b=" + this.palette.get(0).getBlue() + "},{r=" +
-                this.palette.get(1).getRed() + ",g=" + this.palette.get(1).getGreen() + ",b=" +
-                this.palette.get(1).getBlue() + "}]}";
+        String output;
+        output = "Colour Table : {size = " + this.getSize() + ", palette = [";
+        for(int i=0; i < (this.getSize()) - 1;i++){
+            output = output + "{r=" + this.palette.get(i).getRed() +
+                    ",g=" + this.palette.get(i).getGreen() +
+                    ",b=" + this.palette.get(i).getBlue() + "},";
+        };
+        output += "{r=" + this.palette.get(this.getSize() - 1).getRed() +
+                ",g=" + this.palette.get(this.getSize() - 1).getGreen() +
+                ",b=" + this.palette.get(this.getSize() - 1).getBlue() + "}]}";
+        return output;
     }
 
     public static void main(String[] args) {
